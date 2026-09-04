@@ -1,3 +1,50 @@
+:root {
+  --primary-color: #0156ff;
+}
+.pm-color {
+  color: var(--primary-color);
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.csr {
+  cursor: pointer;
+}
+.h-20vh {
+  height: 20vh;
+}
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+  background-color: red;
+}
+.carousel-btn-ctr {
+  top: 0;
+  left: 0;
+}
+.carousel-btn-div {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0px 0.5rem;
+}
+.carousel .btn {
+  background-color: none;
+  border: none;
+}
 header {
   position: sticky;
   top: 0;
@@ -27,6 +74,12 @@ header .sec-2 {
 header .mobile-container {
   display: none;
 }
+.carousel .btn {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgb(252, 250, 250);
+}
 
 @media screen and (max-width: 600px) {
   header {
@@ -41,13 +94,28 @@ header .mobile-container {
   }
   header .mobile-container {
     display: inline-flex;
-    align-items: center ;
-    gap: 6px;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
     background-color: #0156ff;
   }
   #search-box {
     border-radius: 0.5rem;
     background-color: white;
     padding: 0.6rem;
+  }
+  .cart {
+    position: relative;
+  }
+  .cart span {
+    position: absolute;
+    padding: 2px;
+    width: 20px;
+    top: -8px;
+    left: 1.2rem;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: whitesmoke;
   }
 }
