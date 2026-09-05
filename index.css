@@ -3,6 +3,11 @@
   font-weight: 600;
   font-style: normal;
 }
+.regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --primary-color: #0156ff;
@@ -64,6 +69,8 @@ header {
   position: sticky;
   top: 0;
   box-shadow: 2px 2px 5px rgba(186, 184, 184, 0.732);
+  background-color: white;
+  z-index: 1200;
 }
 header .container {
   display: flex;
@@ -99,6 +106,37 @@ header .mobile-container {
 .fade {
   animation: fade-animation 2s ease-in-out;
 }
+.card-slider {
+  display: flex;
+}
+.product-card {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 6px;
+}
+.product-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.tick {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #78a962;
+}
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.review-txt {
+  color: #a2a6b0;
+}
+.stars {
+  display: inline-flex;
+  gap: 8px;
+}
 @keyframes fade-animation {
   0% {
     opacity: 0;
@@ -117,11 +155,22 @@ header .mobile-container {
 section {
   display: grid;
   row-gap: 1rem;
+  margin-top: 0.5rem;
   padding: 0px 8px;
 }
 
 .card {
 }
+
+
+mobile - max 600px
+ 
+tab - 768
+
+
+
+
+/* For mobile devices */
 @media screen and (max-width: 600px) {
   header {
     background-color: #0156ff;
@@ -168,13 +217,12 @@ section {
   .h-20vh {
     height: 30vh;
   }
+  .card-slider
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
-@media screen and (max-width: 340px) {
-  header .mobile-container {
-    flex-wrap: wrap;
-  }
-  #search-box {
-    width: 100%;
-  }
-}
+
+
